@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Cinemapp</string>
+    <string name="profile_id">My profile</string>
+
+    <dimen name="font_size">22sp</dimen>
+
+    <string name="movie_cover">Movie</string>
+    <dimen name="movie_teaser_font_size">18sp</dimen>
+    <string name="movie_teaser">Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts. His priorities begin to change when he partners with Jesse.</string>
+    <string name="movie_brick_button">Watch!</string>
+
 </resources>
