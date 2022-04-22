@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button_go.setOnClickListener {
+        button_watch.setOnClickListener {
             Toast.makeText(this, "Enjoy watching the movie!", Toast.LENGTH_SHORT).show()
         }
     }

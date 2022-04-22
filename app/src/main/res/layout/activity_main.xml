@@ -7,87 +7,88 @@
     tools:context=".MainActivity">
 
 
-    <FrameLayout
+    <LinearLayout
         android:id="@+id/topPanel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/topPanelHeight_ScrollWMarginTop"
-        android:background="@color/gray_bg"
+        android:layout_height="@dimen/height_topPanel_x_marginT_ScrollV"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/gray_bg"
+        android:padding="@dimen/padding_topPanel">
 
         <ImageView
-            android:id="@+id/topPanel_profile_img"
-            android:layout_width="@dimen/topPanel_profile_img_size"
-            android:layout_height="@dimen/topPanel_profile_img_size"
+            android:id="@+id/topPanel_profileImg"
+            android:layout_width="@dimen/img_size_in_topPanel"
+            android:layout_height="@dimen/img_size_in_topPanel"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/marginStartEnd_forBricks"
             android:src="@drawable/ic_baseline_account_box_24"
             android:scaleType="centerCrop"
-            android:contentDescription="@string/movie_cover"/>
+            android:contentDescription="@string/profile_img"/>
+
         <TextView
-            android:id="@+id/topNameS"
+            android:id="@+id/top_profile_link"
             android:text="@string/profile_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size"
             android:textStyle="bold"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/bottomPanelHeight_ScrollWMarginBottom"
             android:textColor="@color/white"/>
-    </FrameLayout>
+    </LinearLayout>
+
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/topPanelHeight_ScrollWMarginTop"
-        android:layout_marginBottom="@dimen/bottomPanelHeight_ScrollWMarginBottom"
-        android:scrollbarSize="10dp">
+        android:layout_marginTop="@dimen/height_topPanel_x_marginT_ScrollV"
+        android:layout_marginBottom="@dimen/height_bottomPanel_x_marginB_ScrollV"
+        android:background="@color/gray_bg"
+        android:scrollbarSize="@dimen/padding_scrollContent">
 
         <LinearLayout
             android:id="@+id/contentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/gray_bg">
+            android:padding="@dimen/padding_scrollContent">
 
             <LinearLayout
-                android:id="@+id/itemLayout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick">
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:padding="@dimen/padding_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card">
 
                 <ImageView
                     android:id="@+id/movie_cover_brick"
-                    android:layout_width="@dimen/movie_bg_size_in_brick"
-                    android:layout_height="@dimen/movie_bg_size_in_brick"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="@dimen/marginStartEnd_for_movieCover_in_bricks"
+                    android:layout_width="@dimen/img_size_in_card"
+                    android:layout_height="@dimen/img_size_in_card"
                     android:src="@drawable/bbad"
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/movie_cover"/>
 
                 <TextView
-                    android:id="@+id/movie_description"
-                    android:text="@string/movie_teaser"
+                    android:id="@+id/card_description"
+                    android:text="@string/movie_name"
                     android:ellipsize="end"
-                    android:layout_width="@dimen/movie_tteaser_width_in_brick"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:textSize="@dimen/movie_teaser_font_size"
+                    android:layout_width="@dimen/width_movieName_in_card"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size"
+                    android:textStyle="bold"
+                    android:layout_gravity="top"
+                    android:paddingStart="@dimen/padding_card"
+                    android:paddingEnd="@dimen/padding_card"
                     android:maxLines="5"
-                    android:layout_marginStart="@dimen/marginStartEnd_forBricks"
                     android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/button_go"
+                    android:id="@+id/button_watch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:background="@color/blue_mid"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/push_the_button"
                     android:text="@string/movie_brick_button"
                     android:textColor="@color/white"/>
 
@@ -95,53 +96,51 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick" />
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick" />
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick" />
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_card"
+                app:cardBackgroundColor="@color/gray_menu"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick" />
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/brick_height"
-                android:layout_marginTop="@dimen/marginTop_forBricks"
-                android:layout_marginStart="@dimen/marginStartEnd_forBricks"
-                android:layout_marginEnd="@dimen/marginStartEnd_forBricks"
-                android:background="@color/gray_brick" />
+                android:layout_height="@dimen/height_card"
+                android:background="@color/gray_card"
+                android:layout_marginBottom="@dimen/margin_bottom_card"/>
         </LinearLayout>
     </ScrollView>
 
     <FrameLayout
         android:id="@+id/bottomPanel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bottomPanelHeight_ScrollWMarginBottom"
+        android:layout_height="@dimen/height_bottomPanel_x_marginB_ScrollV"
         android:background="@color/gray_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
     </FrameLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

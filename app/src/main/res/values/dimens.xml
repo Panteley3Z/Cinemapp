@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="topPanelHeight_ScrollWMarginTop">60dp</dimen>
-    <dimen name="topPanel_profile_img_size">50dp</dimen>
+    <dimen name="height_topPanel_x_marginT_ScrollV">60dp</dimen>
+    <dimen name="height_bottomPanel_x_marginB_ScrollV">70dp</dimen>
 
-    <dimen name="bottomPanelHeight_ScrollWMarginBottom">70dp</dimen>
-    <dimen name="brick_height">110dp</dimen>
-    <dimen name="movie_bg_size_in_brick">100dp</dimen>
-    <dimen name="movie_tteaser_width_in_brick">180dp</dimen>
-    <dimen name="marginStartEnd_forBricks">10dp</dimen>
-    <dimen name="marginStartEnd_for_movieCover_in_bricks">5dp</dimen>
-    <dimen name="marginTop_forBricks">15dp</dimen>
+    <dimen name="height_card">110dp</dimen>
+
+    <dimen name="width_movieName_in_card">180dp</dimen>
+
+
+    <dimen name="img_size_in_topPanel">50dp</dimen>
+    <dimen name="img_size_in_card">100dp</dimen>
+
+    <dimen name="padding_topPanel">10dp</dimen>
+    <dimen name="padding_scrollContent">10dp</dimen>
+    <dimen name="padding_card">5dp</dimen>
+
+    <dimen name="margin_bottom_card">10dp</dimen>
+
+
 </resources>
