@@ -1,13 +1,22 @@
 <resources>
     <string name="app_name">Cinemapp</string>
-    <string name="profile_id">My profile</string>
+    <string name="topPanel_home">Home</string>
 
-    <dimen name="font_size">22sp</dimen>
 
-    <string name="profile_img">Profile</string>
+    <string name="ic_home">Main</string>
     <string name="movie_cover">Movie</string>
-    <dimen name="movie_teaser_font_size">18sp</dimen>
-    <string name="movie_name">Breaking Bad</string>
-    <string name="movie_brick_button">Watch!</string>
+
+    <string name="movieName_BBad">Breaking Bad</string>
+    <string name="movieName_BBTheory">The Big Bang Theory</string>
+    <string name="movieName_Billions">Billions</string>
+
+    <string name="disclaimer">Movie covers from google.com</string>
+
+    <string name="card_button_txt">Watch!</string>
+    <string name="bottomPanel_button_txt">.</string>
+
+    <dimen name="font_size_regularNorm">18sp</dimen>
+    <dimen name="font_size_bigBold">22sp</dimen>
+
 
 </resources>

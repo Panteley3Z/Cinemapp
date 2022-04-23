@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="height_topPanel_x_marginT_ScrollV">60dp</dimen>
-    <dimen name="height_bottomPanel_x_marginB_ScrollV">80dp</dimen>
+    <dimen name="height_bottomPanel_x_marginB_ScrollV">90dp</dimen>
 
     <dimen name="height_card">110dp</dimen>
     <dimen name="width_card">300dp</dimen>
+
 
     <dimen name="width_movieName_in_card">180dp</dimen>
 
@@ -21,7 +22,7 @@
 
 
     <dimen name="margin_bottom_card">10dp</dimen>
-    <dimen name="margin_start_bottomP_buttons">58dp</dimen>
+    <dimen name="margin_start_bottomP_buttons">42dp</dimen>
 
 
     <dimen name="card_corner_r">10dp</dimen>
