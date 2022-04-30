@@ -6,377 +6,216 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
-        android:id="@+id/topPanel"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_topPanel_x_marginT_ScrollV"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/gray_bg"
-        android:padding="@dimen/padding_topPanel">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/topPanel_ic_home"
-            android:layout_width="@dimen/img_size_in_topPanel"
-            android:layout_height="@dimen/img_size_in_topPanel"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/margin_bottom_card"
-            android:src="@drawable/ic_baseline_home_24"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/ic_home"/>
-
-        <TextView
-            android:id="@+id/top_profile_link"
-            android:text="@string/topPanel_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/font_size_bigBold"
-            android:textStyle="bold"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/margin_bottom_card"
-            android:textColor="@color/white"/>
-    </LinearLayout>
-
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:buttonGravity="center_vertical"
+            app:navigationIcon="@drawable/ic_baseline_menu_24"
+            app:title="Cinemapp"
+            app:menu="@menu/top_app_bar"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/height_topPanel_x_marginT_ScrollV"
-        android:layout_marginStart="@dimen/height_bottomPanel_x_marginB_ScrollV"
-        android:background="@color/gray_bg"
-        android:scrollbarSize="@dimen/padding_scrollContent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbarSize="@dimen/margins_card">
 
-        <TableLayout
+        <LinearLayout
             android:id="@+id/contentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/padding_scrollContent">
+            android:paddingBottom="@dimen/height_bottomPanel_x_marginB_ScrollV">
 
-            <TableRow
-                android:id="@+id/tableRow1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie1"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
+                    <ImageView
+                        android:id="@+id/card1_movieCover"
+                        android:src="@drawable/bbad"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
 
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/bbad"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerInside"
-                            android:contentDescription="@string/movie_cover"/>
+                    <TextView
+                        android:id="@+id/card1_movieName"
+                        android:text="@string/movieName_BreakingBad"
+                        style="@style/CardTextStyle"/>
 
-                        <TextView
-                            android:id="@+id/card_movie1desc"
-                            android:text="@string/movieName_BBad"
-                            android:ellipsize="end"
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:textStyle="bold"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:maxLines="3"
-                            android:textColor="@color/white"/>
+                    <Button
+                        android:id="@+id/card1_button"
+                        style="@style/CardButtonStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card2_movieCover"
+                        android:src="@drawable/bbtheory"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
+
+                    <TextView
+                        android:id="@+id/card2_movieName"
+                        android:text="@string/movieName_BBTheory"
+                        style="@style/CardTextStyle"/>
+
+                    <Button
+                        android:id="@+id/card2_button"
+                        style="@style/CardButtonStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie2"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
+                    <ImageView
+                        android:id="@+id/card3_movieCover"
+                        android:src="@drawable/billions"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
+                    <TextView
+                        android:id="@+id/card3_movieName"
+                        android:text="@string/movieName_Billions"
+                        style="@style/CardTextStyle"/>
 
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/bbtheory"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerInside"
-                            android:contentDescription="@string/movie_cover"/>
-
-                        <TextView
-                            android:id="@+id/card_movie2desc"
-                            android:text="@string/movieName_BBTheory"
-                            android:ellipsize="end"
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:textStyle="bold"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:maxLines="3"
-                            android:textColor="@color/white"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie3"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
-
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/billions"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerInside"
-                            android:contentDescription="@string/movie_cover"/>
-
-                        <TextView
-                            android:id="@+id/card_movie3desc"
-                            android:text="@string/movieName_Billions"
-                            android:ellipsize="end"
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:textStyle="bold"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:maxLines="3"
-                            android:textColor="@color/white"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/card3_button"
+                        style="@style/CardButtonStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie4"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
+                    <ImageView
+                        android:src="@drawable/ic_baseline_local_movies_24"
+                        android:background="@drawable/gradient_bg"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
 
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/ic_baseline_local_movies_24"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerCrop"
-                            android:contentDescription="@string/movie_cover"/>
-
-                        <TextView
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:text="@string/disclaimer"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:autoLink="web"
-                            android:linksClickable="true"
-                            android:textColorLink="@color/blue_mid"
-                            android:textColor="@color/white"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie5"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
-
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/ic_baseline_local_movies_24"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerCrop"
-                            android:contentDescription="@string/movie_cover"/>
-
-                        <TextView
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:text="@string/disclaimer"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:autoLink="web"
-                            android:linksClickable="true"
-                            android:textColorLink="@color/blue_mid"
-                            android:textColor="@color/white"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:text="@string/disclaimer"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        style="@style/CardTextStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_movie6"
-                    android:layout_width="@dimen/width_card"
-                    android:layout_height="@dimen/height_card"
-                    app:cardBackgroundColor="@color/gray_card"
-                    app:cardCornerRadius="@dimen/card_corner_r"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:layout_marginBottom="@dimen/margin_bottom_card">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:padding="@dimen/padding_card">
+                    <ImageView
+                        android:src="@drawable/ic_baseline_local_movies_24"
+                        android:background="@drawable/gradient_bg"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
 
-                        <ImageView
-                            android:layout_width="@dimen/img_size_in_card"
-                            android:layout_height="@dimen/img_size_in_card"
-                            android:src="@drawable/ic_baseline_local_movies_24"
-                            android:background="@drawable/gradient_bg"
-                            android:scaleType="centerCrop"
-                            android:contentDescription="@string/movie_cover"/>
+                    <TextView
+                        android:text="@string/disclaimer"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        style="@style/CardTextStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="@dimen/width_movieName_in_card"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_bigBold"
-                            android:text="@string/disclaimer"
-                            android:layout_gravity="center_vertical"
-                            android:paddingStart="@dimen/padding_movieName_card"
-                            android:paddingEnd="@dimen/padding_card"
-                            android:autoLink="web"
-                            android:linksClickable="true"
-                            android:textColorLink="@color/blue_mid"
-                            android:textColor="@color/white"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-            </TableRow>
-        </TableLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/ic_baseline_local_movies_24"
+                        android:background="@drawable/gradient_bg"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
+
+                    <TextView
+                        android:text="@string/disclaimer"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        style="@style/CardTextStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                style="@style/CardStyle">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:src="@drawable/ic_baseline_local_movies_24"
+                        android:background="@drawable/gradient_bg"
+                        android:contentDescription="@string/movie_cover"
+                        style="@style/CardCoverStyle"/>
+
+                    <TextView
+                        android:text="@string/disclaimer"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        style="@style/CardTextStyle"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </ScrollView>
 
 
-
-    <LinearLayout
-        android:id="@+id/bottomPanel"
-        android:layout_width="@dimen/height_bottomPanel_x_marginB_ScrollV"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/height_topPanel_x_marginT_ScrollV"
-        android:orientation="vertical"
-        android:background="@color/gray_bg"
-        android:paddingStart="@dimen/padding_bottomPanel"
-        android:paddingEnd="@dimen/padding_bottomPanel"
-        android:paddingBottom="@dimen/padding_bottomPanel"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margins_card"
+        android:layout_marginEnd="@dimen/margins_card"
+        android:layout_marginBottom="@dimen/margins_card"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/bottom_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="@dimen/card_corner_r"
-            android:elevation="5dp"
-            app:cardBackgroundColor="@color/gray_menu">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/gradient_bg">
-
-                <Button
-                    android:id="@+id/bottomP_button_marked"
-                    android:layout_width="@dimen/img_size_in_bottomPanel"
-                    android:layout_height="@dimen/img_size_in_bottomPanel"
-                    android:layout_gravity="center_vertical"
-                    android:foreground="@drawable/ic_baseline_turned_in_24"
-                    android:background="?selectableItemBackgroundBorderless"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:foregroundTint="@color/white_ic_transparent"
-                    android:layout_marginTop="@dimen/margin_start_bottomP_buttons"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:text="@string/bottomPanel_button_txt"
-                    android:textColor="#00FFFFFF"/>
-
-                <Button
-                    android:id="@+id/bottomP_button_wLater"
-                    android:layout_width="@dimen/img_size_in_bottomPanel"
-                    android:layout_height="@dimen/img_size_in_bottomPanel"
-                    android:layout_gravity="center_vertical"
-                    android:foreground="@drawable/ic_baseline_watch_later_24"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:foregroundTint="@color/white_ic_transparent"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_marginTop="@dimen/margin_start_bottomP_buttons"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:text="@string/bottomPanel_button_txt"
-                    android:textColor="#00FFFFFF"/>
-
-                <Button
-                    android:id="@+id/bottomP_button_fortune"
-                    android:layout_width="@dimen/img_size_in_bottomPanel"
-                    android:layout_height="@dimen/img_size_in_bottomPanel"
-                    android:layout_gravity="center_vertical"
-                    android:foreground="@drawable/ic_baseline_fortune_24"
-                    android:background="?selectableItemBackgroundBorderless"
-                    android:foregroundTint="@color/white_ic_transparent"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_marginTop="@dimen/margin_start_bottomP_buttons"
-                    android:layout_marginStart="@dimen/margin_bottom_card"
-                    android:text="@string/bottomPanel_button_txt"
-                    android:textColor="#00FFFFFF"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/gradient_bg"
+        app:itemTextColor="@android:color/white"
+        app:itemIconTint="@android:color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

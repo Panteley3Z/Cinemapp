@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="gray_bg">#FF232527</color>
-    <color name="gray_card">#FF353A3F</color>
-    <color name="gray_menu">#FF444950</color>
-    <color name="blue_mid">#FF3350F0</color>
-    <color name="blue_light">#FF5FAFFF</color>
+    <color name="gray_deep">#FF232527</color>
+    <color name="gray_dark">#FF353A3F</color>
+    <color name="purple_mid">#FFBB77DD</color>
+    <color name="blue_dark">#FF5555DF</color>
+    <color name="blue_light">#FFDDDDFF</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_ic_transparent">#CFFFFFFF</color>
+    <color name="white_fog">#FFF7F7F7</color>
+    <color name="white_shadow">#FFE0E0E0</color>
+    <color name="red">#FFCF0000</color>
+    <color name="red_light">#FFFF5050</color>
+    <color name="green">#FF00AF00</color>
+    <color name="green_light">#FF50FF50</color>
+    <color name="yellow">#FFF0DF00</color>
+    <color name="transparent">#01FFFFFF</color>
 </resources>
