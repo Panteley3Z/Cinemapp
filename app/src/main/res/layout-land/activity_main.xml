@@ -17,7 +17,6 @@
             android:layout_height="match_parent"
             app:buttonGravity="center_vertical"
             app:navigationIcon="@drawable/ic_baseline_menu_24"
-            android:theme="@style/AppTheme.topNavIconsTint"
             app:title="Cinemapp"
             app:menu="@menu/top_app_bar"/>
     </com.google.android.material.appbar.AppBarLayout>
@@ -36,10 +35,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingBottom="@dimen/height_bottomPanel_x_marginB_ScrollV">
-
-            <ru.devzerkpant.cinemapp.SearhCardView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"

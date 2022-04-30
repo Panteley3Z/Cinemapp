@@ -7,5 +7,4 @@
     <dimen name="width_card">300dp</dimen>
 
     <dimen name="margins_card">10dp</dimen>
-
 </resources>

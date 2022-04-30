@@ -1,13 +1,30 @@
 <resources>
     <string name="app_name">Cinemapp</string>
-    <string name="profile_id">My profile</string>
 
-    <dimen name="font_size">22sp</dimen>
+    <string name="top_menu_profile">Profile</string>
+    <string name="top_menu_settings">Settings</string>
+    <string name="top_menu_lTheme">Light Theme</string>
+    <string name="top_menu_dTheme">Dark Theme</string>
+    <string name="top_menu_more">More</string>
 
-    <string name="profile_img">Profile</string>
+    <string name="top_menu_add">Add to watch later</string>
+    <string name="top_menu_remove">Not interested</string>
+
+    <string name="search_field_txt">Simpsons</string>
+
     <string name="movie_cover">Movie</string>
-    <dimen name="movie_teaser_font_size">18sp</dimen>
-    <string name="movie_name">Breaking Bad</string>
-    <string name="movie_brick_button">Watch!</string>
+
+    <string name="movieName_BreakingBad">Breaking Bad</string>
+    <string name="movieName_BBTheory">The Big Bang Theory</string>
+    <string name="movieName_Billions">Billions</string>
+
+    <string name="disclaimer">Movie covers from google.com</string>
+
+    <string name="card_button_txt">Watch</string>
+    <string name="search_button_txt">Search</string>
+
+    <string name="bottom_menu_favorites">Favorites</string>
+    <string name="bottom_menu_watchLater">Watch later</string>
+    <string name="bottom_menu_Fortune">Fortune</string>
 
 </resources>

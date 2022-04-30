@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_favorites"
+        android:icon="@drawable/ic_baseline_turned_in_24"
+        android:title="@string/bottom_menu_favorites"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/bottom_watchLater"
+        android:icon="@drawable/ic_baseline_watch_later_24"
+        android:title="@string/bottom_menu_watchLater"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/bottom_fortune"
+        android:icon="@drawable/ic_baseline_fortune_24"
+        android:title="@string/bottom_menu_Fortune"
+        app:showAsAction="ifRoom"/>
+</menu>
