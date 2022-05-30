@@ -4,7 +4,7 @@
     <dimen name="height_bottomPanel_x_marginB_ScrollV">72dp</dimen>
 
     <dimen name="height_card">110dp</dimen>
-    <dimen name="width_card">300dp</dimen>
+    <dimen name="width_card">320dp</dimen>
 
     <dimen name="margins_card">10dp</dimen>
 </resources>
