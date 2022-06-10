@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 
 class HomeFragment : Fragment() {
 
@@ -34,6 +37,29 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        search_view.setOnClickListener {
+            search_view.isIconified = false
+        }
+
+        search_view.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+                override fun onQueryTextChange(newText: String): Boolean {
+                    if (newText.isEmpty()) {
+                        filmsAdapter.addItems(cinemaDataBase)
+                        return true
+                    }
+                    val result = cinemaDataBase.filter {
+                        it.title.lowercase(Locale.getDefault()).contains(newText.lowercase(Locale.getDefault()))
+                    }
+                    filmsAdapter.addItems(result)
+                    return true
+                }
+            }
+        )
 
         main_rv.apply {
             filmsAdapter = FilmListRecyclerAdapter(object : FilmListRecyclerAdapter.OnItemClickListener {
