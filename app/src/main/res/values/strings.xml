@@ -14,10 +14,6 @@
 
     <string name="movie_cover">Movie</string>
 
-    <string name="movieName_BreakingBad">Breaking Bad</string>
-    <string name="movieName_BBTheory">The Big Bang Theory</string>
-    <string name="movieName_Billions">Billions</string>
-
     <string name="disclaimer">Movie covers from google.com</string>
 
     <string name="card_button_txt">Watch</string>
@@ -26,5 +22,6 @@
     <string name="bottom_menu_favorites">Favorites</string>
     <string name="bottom_menu_watchLater">Watch later</string>
     <string name="bottom_menu_Fortune">Fortune</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

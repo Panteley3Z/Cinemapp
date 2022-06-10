@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/top_profile_link"
+        android:id="@+id/v_menu_top_profile_link"
         android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="@string/top_menu_profile"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/top_settings"
+        android:id="@+id/v_menu_top_settings"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/top_menu_settings"
         app:showAsAction="withText"/>
 
     <item
-        android:id="@+id/top_ltheme"
+        android:id="@+id/v_menu_top_ltheme"
         android:title="@string/top_menu_lTheme"
         app:showAsAction="withText"/>
     <item
-        android:id="@+id/top_dtheme"
+        android:id="@+id/v_menu_top_dtheme"
         android:title="@string/top_menu_dTheme"
         app:showAsAction="withText"/>
 
     <item
-        android:id="@+id/top_more"
+        android:id="@+id/v_menu_top_more"
         android:title="@string/top_menu_more"
         app:showAsAction="withText" />
 
